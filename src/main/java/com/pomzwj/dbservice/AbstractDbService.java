@@ -67,7 +67,8 @@ public abstract class AbstractDbService {
                 String tableName = MapUtils.getString(resultMap, "TABLE_NAME");
                 String tableComments = MapUtils.getString(resultMap, "COMMENTS");
                 if (StringUtils.isEmpty(tableComments)) {
-                    dbTable.setTableComments(FiledDefaultValue.TABLE_COMMENTS_DEFAULT);
+//                    dbTable.setTableComments(FiledDefaultValue.TABLE_COMMENTS_DEFAULT);
+                    dbTable.setTableComments(tableName + "表");
                 } else {
                     dbTable.setTableComments(tableComments);
                 }

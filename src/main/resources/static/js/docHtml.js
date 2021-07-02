@@ -28,6 +28,9 @@ function loadTable(params) {
     let tableDetailInfo = params.tableDetailInfo;
     let tableHtml = '';
     let headerHtml = '';
+    let headDiv = '<div style="width: 300px;height: 100%;float: left;position: relative;font-size: 22px;margin-top: 20px;flex: 1;overflow:auto;overflow-x: auto;"><ul>';
+    let tailDiv = '</ul></div><div style="position: relative; overflow: auto;height: 100%;flex: 1;float: right;width: 1000px;">';
+    let lis = '';
     for(let i=0;i<headerList.length;i++){
         headerHtml += '<th>'+headerList[i]+'</th>'
     }
@@ -48,18 +51,20 @@ function loadTable(params) {
             tbodyHtml += '</tr>';
         }
 
-
+        lis += '<li><a href="#'+table.tableName+'">'+table.tableName+'</a></li>'
 
         tableHtml +=
-            '<table class="table table-bordered table-hover">'+
+            '<table id="'+table.tableName+'" class="table table-bordered table-hover">'+
             // '<caption style="font-weight: bolder;font-size: 30px">'+table.tableName+'('+table.tableComments+')'+'</caption>'+
-            '<caption style="font-weight: bolder;font-size: 30px">'+table.tableComments+'('+table.tableName+')'+'</caption>'+
+            '<caption style="font-weight: bolder;font-size: 30px;text-align: center;">'+table.tableComments+'('+table.tableName+')'+'</caption>'+
             '<thead>'+
             '<tr>'+headerHtml+'</tr>'+
             '</thead>'+
             '<tbody>'+tbodyHtml+'</tbody>'+
             '</table>';
     }
+    const htmls = headDiv + lis + tailDiv + tableHtml + '</div>';
+    console.log(htmls);
     $("#body").empty();
-    $("#body").append(tableHtml);
+    $("#body").append(htmls);
 }
