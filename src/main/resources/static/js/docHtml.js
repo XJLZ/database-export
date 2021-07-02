@@ -52,7 +52,8 @@ function loadTable(params) {
 
         tableHtml +=
             '<table class="table table-bordered table-hover">'+
-            '<caption style="font-weight: bolder;font-size: 30px">'+table.tableName+'('+table.tableComments+')'+'</caption>'+
+            // '<caption style="font-weight: bolder;font-size: 30px">'+table.tableName+'('+table.tableComments+')'+'</caption>'+
+            '<caption style="font-weight: bolder;font-size: 30px">'+table.tableComments+'('+table.tableName+')'+'</caption>'+
             '<thead>'+
             '<tr>'+headerHtml+'</tr>'+
             '</thead>'+

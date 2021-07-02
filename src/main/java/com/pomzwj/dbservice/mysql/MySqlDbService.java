@@ -122,7 +122,7 @@ public class MySqlDbService extends AbstractDbService implements DbService {
                     dbColumnInfo.setDataType(MapUtils.getString(resultSet, "COLUMN_TYPE"));
                     dbColumnInfo.setNullAble(getStringToBoolean(MapUtils.getString(resultSet, "NULLABLE")));
                     dbColumnInfo.setDefaultVal(MapUtils.getString(resultSet, "DATA_DEFAULT"));
-                    dbColumnInfo.setAutoIncrement(false);
+//                    dbColumnInfo.setAutoIncrement(false);
                     dbColumnInfo.setPrimary(false);
                     String comments = MapUtils.getString(resultSet, "COMMENTS");
                     if (StringUtils.isEmpty(comments)) {
@@ -131,9 +131,9 @@ public class MySqlDbService extends AbstractDbService implements DbService {
                         dbColumnInfo.setComments(comments);
                     }
                     String extraInfo = MapUtils.getString(resultSet, "EXTRA_INFO");
-                    if (!StringUtils.isEmpty(extraInfo) && extraInfo.contains("auto_increment")) {
-                        dbColumnInfo.setAutoIncrement(true);
-                    }
+//                    if (!StringUtils.isEmpty(extraInfo) && extraInfo.contains("auto_increment")) {
+//                        dbColumnInfo.setAutoIncrement(true);
+//                    }
                     String columnKey = MapUtils.getString(resultSet, "COLUMN_KEY");
                     if (!StringUtils.isEmpty(columnKey) && columnKey.contains("PRI")) {
                         dbColumnInfo.setPrimary(true);

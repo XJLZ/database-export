@@ -22,8 +22,8 @@ public class DbColumnInfo implements Serializable {
     public Boolean nullAble;
     @DataColumnName(name = "默认值")
     public String defaultVal;
-    @DataColumnName(name = "自增")
-    public Boolean autoIncrement;
+//    @DataColumnName(name = "自增")
+//    public Boolean autoIncrement;
     @DataColumnName(name = "主键")
     public Boolean primary;
     @DataColumnName(name = "备注")
@@ -87,17 +87,17 @@ public class DbColumnInfo implements Serializable {
         this.defaultVal = defaultVal;
     }
 
-    public String getAutoIncrement() {
-        if(autoIncrement == null || autoIncrement == false){
-            return "否";
-        }else{
-            return "是";
-        }
-    }
-
-    public void setAutoIncrement(Boolean autoIncrement) {
-        this.autoIncrement = autoIncrement;
-    }
+//    public String getAutoIncrement() {
+//        if(autoIncrement == null || autoIncrement == false){
+//            return "否";
+//        }else{
+//            return "是";
+//        }
+//    }
+//
+//    public void setAutoIncrement(Boolean autoIncrement) {
+//        this.autoIncrement = autoIncrement;
+//    }
 
     public String getPrimary() {
         if(primary == null || primary == false){

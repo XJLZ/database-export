@@ -124,7 +124,7 @@ public class SqlServerDbService extends AbstractDbService implements DbService {
 					dbColumnInfo.setDefaultVal(MapUtils.getString(resultSet, "DATA_DEFAULT"));
 					dbColumnInfo.setDataScale(MapUtils.getString(resultSet, "DATA_SCALE"));
 					String comments = MapUtils.getString(resultSet, "COMMENTS");
-					dbColumnInfo.setAutoIncrement(getStringToBoolean(MapUtils.getString(resultSet, "AUTOINCREMENT")));
+//					dbColumnInfo.setAutoIncrement(getStringToBoolean(MapUtils.getString(resultSet, "AUTOINCREMENT")));
 					dbColumnInfo.setPrimary(getStringToBoolean(MapUtils.getString(resultSet, "PRIMARY_KEY")));
 					if (StringUtils.isEmpty(comments)) {
 						dbColumnInfo.setComments(FiledDefaultValue.TABLE_FIELD_COMMENTS_DEFAULT);
