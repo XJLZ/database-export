@@ -1,17 +1,18 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <meta http-equiv="pragma" content="no-cache" />
-    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
     <meta http-equiv="Cache-Control" content="no-store"/>
-    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Expires" content="0"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
     <meta charset="UTF-8">
     <title>database-export</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../../static/assetss/images/fav.png" th:href="@{/assetss/images/fav.png}">
-    <link rel="stylesheet" href="../../../static/bootstrap/css/bootstrap.min.css" th:href="@{/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="../../../static/bootstrap/css/bootstrap.min.css"
+          th:href="@{/bootstrap/css/bootstrap.min.css}">
     <link rel="stylesheet" href="../../../static/css/index.css" th:href="@{/css/index.css}">
     <script src="../../../static/js/jquery-3.3.1.js" th:src="@{/js/jquery-3.3.1.js}"></script>
     <script src="../../../static/bootstrap/js/bootstrap.min.js" th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
@@ -20,16 +21,18 @@
     </script>
 </head>
 <style>
-    .body{
+    .body {
         width: 1400px;
         margin-top: 20px;
         margin-left: 100px;
         margin-right: 100px;
     }
-    .table{
+
+    .table {
         margin: 100px 0 100px 0;
 
     }
+
     .sp {
         width: 32px;
         height: 32px;
@@ -54,6 +57,7 @@
             -webkit-transform: rotate(359deg);
         }
     }
+
     @keyframes spCircRot {
         from {
             transform: rotate(0deg);
@@ -74,14 +78,14 @@
 
 </div>
 <script type="text/javascript" th:inline="javascript">
-    /*<![CDATA[*/
-    var ctx = [[@{/}]];
-    var ip = [[${dbBaseInfo.ip}]];
-    var port = [[${dbBaseInfo.port}]];
-    var dbName = [[${dbBaseInfo.dbName}]];
-    var userName = [[${dbBaseInfo.userName}]];
-    var password = [[${dbBaseInfo.password}]];
-    var dbKind = [[${dbBaseInfo.dbKind}]];
+  /*<![CDATA[*/
+  var ctx = [[@{/}]];
+  var ip = [[${dbBaseInfo.ip}]];
+  var port = [[${dbBaseInfo.port}]];
+  var dbName = [[${dbBaseInfo.dbName}]];
+  var userName = [[${dbBaseInfo.userName}]];
+  var password = [[${dbBaseInfo.password}]];
+  var dbKind = [[${dbBaseInfo.dbKind}]];
 </script>
 <script src="../../../static/js/docHtml.js" th:src="@{/js/docHtml.js}"></script>
 </body>
